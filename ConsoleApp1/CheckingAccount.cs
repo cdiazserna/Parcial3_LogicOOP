@@ -4,7 +4,8 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    internal class CheckingAccount
+    public class CheckingAccount : BankAccount
     {
+
     }
 }
