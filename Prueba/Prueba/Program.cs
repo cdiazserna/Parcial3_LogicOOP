@@ -11,7 +11,7 @@ namespace Prueba
             Numero numero = new Numero();
             Console.WriteLine("Ingrese un numero");
             numero.NumeroEntero = Convert.ToInt32(Console.ReadLine());
-            par= numero.esPrimo();
+            par= numero.esPar();
 
             if (par)
             {

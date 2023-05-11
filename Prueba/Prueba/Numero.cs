@@ -5,7 +5,7 @@ public class Numero
     public int NumeroEntero { get; set; }
 
 
-    public bool esPrimo()
+    public bool esPar()
     {
 
         if (NumeroEntero % 2 == 0)
