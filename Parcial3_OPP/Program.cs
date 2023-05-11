@@ -6,7 +6,7 @@ namespace Parcial3_OPP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");// prueba commit changes
+            Console.WriteLine("Hello World!");// test commit changes
         }
     }
 }
