@@ -6,7 +6,7 @@ namespace Parcial3POO
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Prueba Commit all and sync");
         }
     }
 }
