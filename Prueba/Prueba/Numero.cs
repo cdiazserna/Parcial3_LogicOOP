@@ -1,8 +1,17 @@
 ﻿using System;
 
-public class Class1
+public class Numero
 {
-	public Class1()
-	{
-	}
+    public int NumeroEntero { get; set; }
+
+
+    public bool esPrimo()
+    {
+
+        if (NumeroEntero % 2 == 0)
+        {
+            return true;
+        }
+        else return false;
+    }
 }

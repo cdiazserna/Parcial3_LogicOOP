@@ -6,7 +6,18 @@ namespace Prueba
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            bool primo;
+            Console.WriteLine("POO NUMERO");
+            Numero numero = new Numero();
+            Console.WriteLine("Ingrese un numero");
+            numero.NumeroEntero = Convert.ToInt32(Console.ReadLine());
+            primo = numero.esPrimo();
+
+            if (primo)
+            {
+                Console.WriteLine("El numero es primo");
+            }
+
         }
     }
 }
