@@ -6,16 +6,16 @@ namespace Prueba
     {
         static void Main(string[] args)
         {
-            bool primo;
+            bool par;
             Console.WriteLine("POO NUMERO");
             Numero numero = new Numero();
             Console.WriteLine("Ingrese un numero");
             numero.NumeroEntero = Convert.ToInt32(Console.ReadLine());
-            primo = numero.esPrimo();
+            par= numero.esPrimo();
 
-            if (primo)
+            if (par)
             {
-                Console.WriteLine("El numero es primo");
+                Console.WriteLine("El numero es par");
             }
 
         }
