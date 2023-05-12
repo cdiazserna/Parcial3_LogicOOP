@@ -2,41 +2,48 @@
 
 public class CheckingAccount:BankAccount
 {
-    public int credit { get; set; }
-    private decimal totalDeposit { get; set; }
-    public string interestRate { get; set; }
-    public string overDraft { get; set; }
-    public decimal cashWithdrawn { get; set; }
-    public int daysLate { get; set; }
+    public decimal credit { get; set; }//
+    public float interestRate { get; set; } //
+    public decimal overDraft { get; set; }//
+    public decimal cashWithdrawn { get; set; }//
+    public int daysLate { get; set; }//
+    public decimal card { get; set; }
 
 
 
     public void deposit()
     {
         
-        Console.WriteLine("Ingrese la cuenta del titular a depositar \n");
+        Console.WriteLine("Ingrese la cuenta del titular del credito \n");
         numberAccount = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Ingrese El monto a depositar \n");
-        totalDeposit = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Ingrese El monto del credito \n");
+        credit = Convert.ToInt32(Console.ReadLine());
     }
 
-    public decimal withDraw()
+    public void withDraw()
     {
-
         Console.WriteLine("Ingrese la cantidad de dinero a retirar \n");
         cashWithdrawn = Convert.ToDecimal(Console.ReadLine());
-        //balance = balance - cashWithdrawn;
-
-        return cashWithdrawn;
+        credit = credit - cashWithdrawn;
     }
 
     public decimal calculateOverdraft()
+
     {
-        return totalDeposit *(decimal)0.4;
+        overDraft = credit * (decimal)interestRate;
+        return overDraft;
     }
 
     public decimal calculateLatePayment()
     {
-        return daysLate * (decimal)(2.65 / 100);
+        return daysLate * (decimal)(interestRate);
+    }
+
+
+    public void creditCard()
+    {
+        Console.WriteLine("Ingrese el monto de la compra de la tarjeta");
+        card = Convert.ToDecimal(Console.ReadLine());
+        credit = credit - card;
     }
 }
