@@ -3,11 +3,11 @@
 public class CheckingAccount:BankAccount
 {
     public int credit { get; set; }
-    private int totalDeposit { get; set; }
+    private decimal totalDeposit { get; set; }
     public string interestRate { get; set; }
     public string overDraft { get; set; }
-    public int cashWithdrawn { get; set; }
-    public int balance { get; set; }
+    public decimal cashWithdrawn { get; set; }
+    public int daysLate { get; set; }
 
 
 
@@ -22,20 +22,21 @@ public class CheckingAccount:BankAccount
 
     public decimal withDraw()
     {
+
         Console.WriteLine("Ingrese la cantidad de dinero a retirar \n");
-        cashWithdrawn = Convert.ToInt32(Console.ReadLine());
-        totalDeposit = totalDeposit - cashWithdrawn;
+        cashWithdrawn = Convert.ToDecimal(Console.ReadLine());
+        //balance = balance - cashWithdrawn;
 
-        return totalDeposit;
+        return cashWithdrawn;
     }
 
-    public void calculateOverdraft()
+    public decimal calculateOverdraft()
     {
-        to
+        return totalDeposit *(decimal)0.4;
     }
 
-    public void calculateLatePayment()
+    public decimal calculateLatePayment()
     {
-
+        return daysLate * (decimal)(2.65 / 100);
     }
 }
