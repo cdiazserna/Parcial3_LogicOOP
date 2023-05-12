@@ -22,19 +22,21 @@ namespace Parcial3
             Console.WriteLine($"Banco: {checkingAccount.NameBank}");
             Console.WriteLine($"Número de cuenta: {checkingAccount.NumberAccount}");
 
-            decimal depositAmount = 500m;
-            decimal withdrawAmount = 700m;
-            int daysLate = 3;
-
+            Console.WriteLine("Ingrese la cantidad de dinero a depositar");
+            decimal depositAmount = Convert.ToDecimal( Console.ReadLine() );
             decimal currentCredit = checkingAccount.Deposit(depositAmount);
             Console.WriteLine($"Depósito de {depositAmount:C}. Crédito actual: {currentCredit:C}");
 
+            Console.WriteLine("Ingrese la cantidad de dinero a retirar");
+            decimal withdrawAmount = Convert.ToDecimal(Console.ReadLine());
             decimal currentBalance = checkingAccount.Withdraw(withdrawAmount);
             Console.WriteLine($"Retiro de {withdrawAmount:C}. Saldo actual: {currentBalance:C}");
-
+           
             decimal currentOverdraft = checkingAccount.CalculateOverdraft();
             Console.WriteLine($"Sobregiro disponible: {currentOverdraft:C}");
 
+            Console.WriteLine("Ingrese la cantidad de días de retraso");
+            int daysLate = Convert.ToInt32(Console.ReadLine());
             decimal latePaymentFee = checkingAccount.CalculateLatePayment(daysLate);
             Console.WriteLine($"Intereses por pago tardío ({daysLate} días): {latePaymentFee:C}");
 
