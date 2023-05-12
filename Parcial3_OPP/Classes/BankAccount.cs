@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Parcial3_OPP.Classes
 {
-    internal class BankAccount
+    public class BankAccount
     {
+
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Parcial3_OPP.Classes
 {
-    internal class SavingAccount
+    public class SavingAccount
     {
     }
 }
