@@ -1,15 +1,30 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 public class SavingAccount
 {
 	public SavingAccount : BankAccount
 	{
-		public decimal Balance { get; set; }
+		public double Balance { get; set; }
 		public decimal Yield { get; set; }
-        public decimal Deposit()
-        public decimal Withdraw()
-        public decimal Transfer()
-        public decimal CalculateLateYields()
+        public double Deposit()
+        { 
+        public class Deposit : BankAccount
+        }
+        public void SavingAccount(int NumberAccount, string Holder, string NameBank, decimal Yield) : BankAccount
+        {
+        Yield = 0.015;
+        }
+
+        public override void Withdraw(double amount, double Balance)
+        {
+        if (amount > Balance)
+        {
+            Console.WriteLine("Saldo insuficiente");
+            return;
+        }
+        Balance = Balance - amount;
     }
+}
 	}
 }

@@ -6,10 +6,19 @@ namespace Parcial3
     {
         static void Main(string[] args)
         {
-            decimal Balance;
+            double Balance;
             
             Console.WriteLine("Ingrese el saldo: ")
-            Balance = Convert.ToDecimal(Console.ReadLine());
-         }
+            Balance = Convert.ToDouble(Console.ReadLine());
+            double Credit = 1000;
+            decimal Yield;
+            // Crear una cuenta corriente con un crédito de 500
+            CheckingAccount checking = new CheckingAccount("115271376", "Laydi Puerta", "Bancolombia", 500);
+
+            // Depositar 1000 en la cuenta de ahorros
+            SavingAccount savings = new SavingAccount("1152713746", "Laydi Puerta", "Bancolombia", 1000);
+            savings.Deposit(1000)
+
+        }
     }
 }
