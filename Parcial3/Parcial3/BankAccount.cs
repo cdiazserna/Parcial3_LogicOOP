@@ -6,22 +6,30 @@ namespace Parcial3
 {
     public class BankAccount
     {
-        //public class BankAccount()
-			//{
-				
-        public int NumberAccount { get; set; }
+        public string Number { get; set; }
         public string Holder { get; set; }
         public string NameBank { get; set; }
+        public double Balance { get; protected set; }
 
-        public void Deposit(decimal amount, decimal Balance)
+        public BankAccount(string number, string holder, string nameBank, double balance)
+        {
+            Number = number;
+            Holder = holder;
+            NameBank = nameBank;
+            Balance = balance;
+        }
+
+        public void Deposit(double amount)
         {
             Balance = Balance + amount;
         }
-        public void Withdraw(decimal amount, decimal Balance)
+
+        public void Withdraw(double amount)
         {
-            Balance = Balance - amount;
+            if (amount <= Balance)
+            {
+                Balance = Balance - amount;
+            }
         }
-      //}
     }
 }
-

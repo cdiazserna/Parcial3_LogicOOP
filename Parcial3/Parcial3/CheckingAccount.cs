@@ -1,58 +1,29 @@
-﻿using System;
+﻿using Parcial3;
+using System;
 using System.Data;
 using System.Security.Cryptography.X509Certificates;
 
-public class CheckingAccount
+public class CheckingAccount : BankAccount
 {
-	public CheckingAccount : BankAccount
-	{
-        public double Credit { get; set; }
-        public double Overdraft { get; set; }
-        public double InterestRate { get; set; }
+    public double Credit { get; set; }
+    public double Overdraft { get; private set; }
+    public double InterestRate { get; set; }
 
-    public CheckingAccount(string NumberAccount, string Holder, string NameBank, double credit) : BankAccount
+    public CheckingAccount(string number, string holder, string nameBank, double credit)
+        : base(number, holder, nameBank, 0)
     {
-        
-        Credit = 1000;
         Credit = credit;
-        Overdraft = 0.4 * credit;
+        Overdraft = credit * 0.4;
         InterestRate = 0.0265;
     }
-       
-        public decimal Deposit()
-            {
-               
-            }
-        public void Withdraw(double amount, double Balance)
-        {
-        if (amount > Balance + Overdraft)
-        {
-            Console.WriteLine("Fondos insuficientes");
-            return;
-        }
-        if (amount <= Balance)
-        {
-            Balance = Balance - amount;
-        }
-        else
-        {
-            double overdraftUsado= amount - Balance;
-            Balance = 0.0;
-            Overdraft = Overdraft - overdraftUsado;
-        }
-        public void CalculateOverdraft()
-        {
-            Console.WriteLine($"Tu limite de sobrecupo es: {Overdraft:C}");
-        }
+    public void CalculateOverdraft()
+    {
+        Console.WriteLine("Tu límite de sobrecupo es: {Overdraft:C}");
+    }
 
-        public double CalculateLatePayment(DateTime dueDate)
-        {
-            int daysLate = (int)(DateTime.Today - dueDate).TotalDays;
-            if (daysLate > 0)
-            {
-                return Balance * InterestRate * daysLate;
-            }
-            return 0.0;
-        }
+    public override string ToString()
+    {
+        return ("Checking Account:\n{base.ToString()}\nCredit: {Credit:C}\nOverdraft: {Overdraft:C}\nInterestRate: {InterestRate:P}\n");
     }
 }
+
