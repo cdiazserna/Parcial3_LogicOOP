@@ -54,6 +54,21 @@ namespace Parcial3POO
             }
         }
 
+        public decimal CalculateInterest(int days)
+        {
+            return Balance * InterestRate * days;
+        }
+
+        public decimal CalculateTotalDue(int days)
+        {
+            return Credit * InterestRate * days;
+        }
+
+        public decimal CalculateOverdueInterest(int days)
+        {
+            return CalculateTotalDue(days) + (Overdraft * InterestRate * days);
+        }
+
     }
 
 
