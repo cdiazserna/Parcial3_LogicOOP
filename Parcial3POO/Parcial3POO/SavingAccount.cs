@@ -6,31 +6,38 @@ namespace Parcial3POO
 {
     public class SavingAccount : BankAccount
     {
-        public double Balance { get; set; }
-        public double Yield { get; set; }
+        public decimal Balance { get; private set; }
+        public decimal InterestRate { get; } = 0.015m;
 
-        public double Deposit()
+        public SavingAccount(string holder,string bankName, decimal initialDeposit)
         {
-
+            Holder = holder;
+            NameBank = NameBank;
+            Balance = initialDeposit;
         }
 
-        public double Withdraw()
+        public void Deposit(decimal amount)
         {
-
-
+            Balance += amount;
         }
 
-        public double Transfer()
+        public void Withdraw(decimal amount)
         {
-
-
+            if (Balance >= amount)
+            {
+                Balance -= amount;
+            }
+            else
+            {
+                Console.WriteLine("Fondos Insuficientes");
+            }
         }
 
-        public double CalculateYields()
+        public decimal CalculateInterest()
         {
-
-
+            return Balance * InterestRate;
         }
+
 
     }
 }

@@ -10,16 +10,5 @@ namespace Parcial3POO
         public string Holder { get; set; }
         public string NameBank { get; set; }
 
-        /*public double Deposit() 
-        {
-        
-        
-        }
-
-        public double Withdraw()
-        {
-
-
-        }*/
     }
 }

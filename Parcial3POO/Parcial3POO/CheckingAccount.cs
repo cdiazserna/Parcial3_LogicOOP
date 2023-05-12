@@ -7,34 +7,23 @@ namespace Parcial3POO
 {
     public class CheckingAccount : BankAccount
     {
-
         public decimal Credit { get; set; }
-        public decimal Overdraft { get; set; }
-        public decimal Balance { get; set; }
-        public decimal InterestRite { get; } = 0.0265m;
-    }
+        public decimal Overdraft { get; private set; }
+        public decimal Balance { get; private set; }
+        public decimal InterestRate { get; } = 0.0265m;
 
-    public Deposit()
-    {
-        Holder = holder;
-        NameBank = nameBack;
-        Credit = credit;
-        Overdraft = credit * 0.4m;
-    }
-
-    public void Withdraw(decimal amount)
-    {
-
+        public CheckingAccount(string holder, string nameBank, decimal credit)
+        {
+            Holder = holder;
+            NameBank = nameBank;
+            Credit = credit;
+            Balance = credit;
+            Overdraft = credit * 0.4m;
+        }
 
     }
 
-    public double CalculateOverdraft() 
-    {
-    
-    }
 
-    public double CalculateLatePayment()
-    {
 
-    }
+
 }
