@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class CheckingAccount
+public class CheckingAccount : BankAccount
 {
 	public decimal Credit { get; set; }
 	public decimal OverDraft { get; set; }

@@ -1,12 +1,13 @@
 ﻿using System;
 
-public class SavingAccount
+public class SavingAccount:BankAccount
 {
-	public double Balance { get; set; }
+	public decimal Balance { get; set; }
 	public decimal Yield { get; set; }
 
 	public void Deposit ()
 	{
+		
 
 	}
 	public void WithDraw ()
