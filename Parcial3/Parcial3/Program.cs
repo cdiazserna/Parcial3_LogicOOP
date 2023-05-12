@@ -62,7 +62,7 @@ namespace Parcial3
 
             Console.WriteLine("Ingrese la cantidad de dinero a retirar");
             decimal withdrawAmount2 = Convert.ToDecimal(Console.ReadLine());
-            currentBalance2 = savingAccount.Deposit(depositAmount2);
+            currentBalance2 = savingAccount.Withdraw(withdrawAmount2);
             Console.WriteLine($"Retiro de {withdrawAmount2:C}. Saldo actual: {currentBalance2:C}");
 
             Console.WriteLine("Ingrese la cantidad de dinero que desea transferir");

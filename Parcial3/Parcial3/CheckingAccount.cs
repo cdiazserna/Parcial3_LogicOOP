@@ -21,12 +21,12 @@ namespace Parcial3
 
         public decimal CalculateOverdraft()
         {
-            return Credit *0.4M;
+            return Credit * Overdraft;
         }
 
         public decimal CalculateLatePayment(int daysLate)
         {
-            return Credit * (0.0265m * daysLate);
+            return Credit * (InterestRate * daysLate);
         }
 
     }
