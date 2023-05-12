@@ -11,8 +11,6 @@ public class SavingAccount:BankAccount
 
     public void deposit()
     {
-        Console.WriteLine("Ingrese la cuenta del titular del credito \n");
-        numberAccount = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Ingrese El monto del credito \n");
         balance = Convert.ToInt32(Console.ReadLine());
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace Bank
 {
@@ -7,6 +8,8 @@ namespace Bank
         static void Main(string[] args)
         {
             CheckingAccount count1 = new CheckingAccount();
+            Console.WriteLine("Ingrese el numero de cuenta: ");
+            count1.numberAccount = Convert.ToInt32(Console.ReadLine());
             count1.deposit();
             Console.WriteLine("Ingrese el número de retiros");
             int n = Convert.ToInt32(Console.ReadLine());
@@ -23,7 +26,7 @@ namespace Bank
                     overdraft = count1.calculateOverdraft();
                     count1.credit = count1.credit + overdraft;
                 }
-                
+
             }
 
             Console.WriteLine("Ingrese el número de Compras con tarjeta \n");
@@ -43,11 +46,14 @@ namespace Bank
             }
             Console.WriteLine("ingrese los dias en mora: ");
             count1.daysLate = Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine("Mora: " + count1.calculateLatePayment());
+            //Console.WriteLine("Mora: " + count1.calculateLatePayment());
 
-
+            Console.Clear();
 
             SavingAccount account = new SavingAccount();
+            Console.WriteLine("Ingrese el numero de cuenta: ");
+            account.numberAccount = Convert.ToInt16(Console.ReadLine());
+
             Console.WriteLine("Ingrese saldo: ");
             account.balance = Convert.ToInt16(Console.ReadLine());
 
@@ -88,9 +94,18 @@ namespace Bank
                     Console.WriteLine("Sin saldo");
                 }
             }
+            Console.Clear();
 
-
-            Console.WriteLine("Ingrese meses")
+            //Console.WriteLine("el rendimiento es de: " + account.calculateYield());
+            //Debes mostrar al final de la pantalla, el valor depositado en cada cuenta,
+            //nombre del titular, nombre del banco, crédito, sobregiro, intereses, saldo y rendimientos y los valores dados por los cálculos de cada método.
+            Console.WriteLine("Checking account:");
+            Console.WriteLine("valor depositado en cada cuenta(credito): "+count1.credit);
+            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
+            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
+            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
+            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
+            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
 
 
 
