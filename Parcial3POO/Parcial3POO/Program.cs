@@ -15,6 +15,12 @@ namespace Parcial3POO
             decimal overdraft = checkingAccount.Overdraft;
             decimal interest = checkingAccount.InterestRite;
             decimal balance = checkingAccount.Balance;
+
+            Console.WriteLine("Cuenta Corriente");
+            Console.WriteLine("Titular:"+ checkingAccount.Holder);
+            Console.WriteLine("Banco: " + checkingAccount.NameBank);
+            Console.WriteLine("Crédito: " + credit);
+            Console.WriteLine("Sobregiro: " + overdraft);
         
 
 

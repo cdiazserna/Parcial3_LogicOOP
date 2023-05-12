@@ -1,24 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Parcial3POO
 {
-    public class CheckingAccount
+    public class CheckingAccount : BankAccount
     {
 
-        public double Credit { get; set; }
-        public double Overdraft { get; set; }
-        public double InterestRite { get; set; }
+        public decimal Credit { get; set; }
+        public decimal Overdraft { get; set; }
+        public decimal Balance { get; set; }
+        public decimal InterestRite { get; } = 0.0265m;
     }
 
-    public double Deposit()
+    public Deposit()
     {
-
-
+        Holder = holder;
+        NameBank = nameBack;
+        Credit = credit;
+        Overdraft = credit * 0.4m;
     }
 
-    public double Withdraw()
+    public void Withdraw(decimal amount)
     {
 
 

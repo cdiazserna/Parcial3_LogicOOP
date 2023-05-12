@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Parcial3POO
 {
-    public class SavingAccount
+    public class SavingAccount : BankAccount
     {
         public double Balance { get; set; }
         public double Yield { get; set; }
