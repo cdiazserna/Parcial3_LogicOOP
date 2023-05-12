@@ -18,11 +18,14 @@ namespace ConsoleApp1
 
         public decimal Withdraw()
         {
-            if (Deposit() > saldoretirado)
+            if (Deposit() < saldoretirado)
             {
-
+                Console.WriteLine("No tiene el suficiente saldo");
             }
-
+            else
+            {
+                Console.WriteLine("Su transacción ha sido realizada");
+            }
             return Withdraw();
         }
 
