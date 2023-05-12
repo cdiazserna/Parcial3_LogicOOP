@@ -7,6 +7,7 @@ namespace Parcial3POO
 {
     public class CheckingAccount : BankAccount
     {
+
         public decimal Credit { get; set; }
         public decimal Overdraft { get; private set; }
         public decimal Balance { get; private set; }
@@ -29,7 +30,7 @@ namespace Parcial3POO
             }
             else
             {
-                Console.WriteLine("Fondos insuficientes");
+                Console.WriteLine("Insufficient funds");
             }
         }
 
