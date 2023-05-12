@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Parcial3
 {
-    public class BanckAccount
+    public class BankAccount
     {
 
         public string NumberAccount { get; set; }

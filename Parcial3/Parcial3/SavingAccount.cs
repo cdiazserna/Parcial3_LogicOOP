@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Parcial3
 {
-    public class SavingAccount : BanckAccount
+    public class SavingAccount : BankAccount
     {
         public decimal Balance { get; set; }
         public decimal Yield { get; set; }

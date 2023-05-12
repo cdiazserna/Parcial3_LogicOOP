@@ -41,7 +41,7 @@ namespace Parcial3
             Console.WriteLine($"Intereses por pago tardío ({daysLate} días): {latePaymentFee:C}");
 
             // Cuenta de Ahorros
-            SavingAccount savingsAccount = new SavingAccount
+            SavingAccount savingAccount = new SavingAccount
             {
                 NumberAccount = "0987654321",
                 Holder = "Maria Lopez",
@@ -51,24 +51,26 @@ namespace Parcial3
             };
 
             Console.WriteLine("\nCuenta de Ahorros");
-            Console.WriteLine($"Titular: {savingsAccount.Holder}");
-            Console.WriteLine($"Banco: {savingsAccount.NameBank}");
-            Console.WriteLine($"Número de cuenta: {savingsAccount.NumberAccount}");
+            Console.WriteLine($"Titular: {savingAccount.Holder}");
+            Console.WriteLine($"Banco: {savingAccount.NameBank}");
+            Console.WriteLine($"Número de cuenta: {savingAccount.NumberAccount}");
 
-            decimal depositAmount2 = 1000m;
-            decimal withdrawAmount2 = 2000m;
-            decimal transferAmount = 500m;
-
-            decimal currentBalance2 = savingsAccount.Deposit(depositAmount2);
+            Console.WriteLine("Ingrese la cantidad de dinero a depositar");
+            decimal depositAmount2 = Convert.ToDecimal(Console.ReadLine());
+            decimal currentBalance2 = savingAccount.Deposit(depositAmount2);
             Console.WriteLine($"Depósito de {depositAmount2:C}. Saldo actual: {currentBalance2:C}");
 
-            currentBalance2 = savingsAccount.Withdraw(withdrawAmount2);
+            Console.WriteLine("Ingrese la cantidad de dinero a retirar");
+            decimal withdrawAmount2 = Convert.ToDecimal(Console.ReadLine());
+            currentBalance2 = savingAccount.Deposit(depositAmount2);
             Console.WriteLine($"Retiro de {withdrawAmount2:C}. Saldo actual: {currentBalance2:C}");
 
-            decimal transferAmountResult = savingsAccount.Transfer(transferAmount);
+            Console.WriteLine("Ingrese la cantidad de dinero que desea transferir");
+            decimal transferAmount = Convert.ToDecimal(Console.ReadLine());
+            decimal transferAmountResult = savingAccount.Transfer(transferAmount);
             Console.WriteLine($"Transferencia de {transferAmount:C}. Saldo actual: {currentBalance2:C}");
 
-            decimal currentYield = savingsAccount.CalculateYield();
+            decimal currentYield = savingAccount.CalculateYield();
             Console.WriteLine($"Rendimiento mensual: {currentYield:C}");
         }
     }
