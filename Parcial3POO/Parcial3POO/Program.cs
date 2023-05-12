@@ -21,7 +21,7 @@ namespace Parcial3POO
             decimal withdrawalAmount = decimal.Parse(Console.ReadLine());
             checkingAccount.Withdraw(withdrawalAmount);
 
-            Console.WriteLine("Ingrese el monto de la compra con tarjeta:");
+            Console.WriteLine("Ingrese el monto de la compra con tarjeta:"); 
             decimal purchaseAmount = decimal.Parse(Console.ReadLine());
             checkingAccount.MakePurchase(purchaseAmount);
 
