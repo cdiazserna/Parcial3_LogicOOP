@@ -40,7 +40,7 @@ namespace ConsoleApp1
         public static void MostrarResultados(string holder, int numberAccount, string nameBank)
         {
             Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-            Console.WriteLine("Resultados:{0}");
+            Console.WriteLine("Resultados");
             Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
             Console.WriteLine("Titular de la cuenta: {0}",holder);
