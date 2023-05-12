@@ -33,21 +33,19 @@ namespace ConsoleApp1
             Console.WriteLine("Ingrese el valor que depositó el banco en su cuenta de ahorros");
             depositoinicial = Convert.ToDouble(Console.ReadLine());
 
-     
-
-   
+            MostrarResultados (holder,numberAccount, nameBank);
 
         }
 
-        public static void MostrarResultados()
+        public static void MostrarResultados(string holder, int numberAccount, string nameBank)
         {
             Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
             Console.WriteLine("Resultados:{0}");
             Console.WriteLine("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 
-            Console.WriteLine("Titular de la cuenta: {0}");
+            Console.WriteLine("Titular de la cuenta: {0}",holder);
 
-            Console.WriteLine("Banco: {0}");
+            Console.WriteLine("Banco: {0}", nameBank);
 
             Console.WriteLine("Cuenta corriente:{0}");
             Console.WriteLine("Crédito inicial aprobado: {0}");
@@ -55,7 +53,7 @@ namespace ConsoleApp1
             Console.WriteLine("Sobregiro: {0}");
             Console.WriteLine("Interés en mora: {0}");
 
-            Console.WriteLine("Cuenta de ahorros:{0}");
+            Console.WriteLine("Cuenta de ahorros:{0}", numberAccount);
             Console.WriteLine("Saldo: {0}");
         }
     }
