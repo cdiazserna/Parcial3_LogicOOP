@@ -8,17 +8,10 @@ namespace Parcial3_OPP.Classes
     {
 
         public decimal NumberAccount { get; set; }
-        public string Holder { get; set; } = 0;
-        public string NameBank { get; set; } = 0;
-        public decimal Balance{ get; set; } = 0;
+        public string Holder { get; set; } 
+        public string NameBank { get; set; } 
+       
 
-        public void  ()
-        {
-            return Deposit;
-        }
-        public void WhithDraw()
-        { return}
-        
     }
 }
     }
