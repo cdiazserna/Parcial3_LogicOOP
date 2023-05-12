@@ -1,8 +1,18 @@
 ﻿using System;
 
-public class Class1
+public class BankAccount
 {
-	public Class1()
-	{
-	}
+    public int NumberAccount { get; set; }
+    public string Holder { get; set; }
+    public string NameBank { get; set; }
+
+
+    public void Deposit()
+    {
+        
+    }
+    public void WithDraw()
+    {
+
+    }
 }
