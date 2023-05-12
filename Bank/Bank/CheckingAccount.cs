@@ -3,7 +3,7 @@
 public class CheckingAccount:BankAccount
 {
     public decimal credit { get; set; }//
-    public float interestRate { get; set; } //
+    public double interestRate = 0.4; //
     public decimal overDraft { get; set; }//
     public decimal cashWithdrawn { get; set; }//
     public int daysLate { get; set; }//
