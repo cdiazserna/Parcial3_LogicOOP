@@ -9,14 +9,19 @@ namespace Parcial3_OPP.Classes
         public  decimal Credit { get; set; }
         public decimal Overdraft { get; set; } = 0;
         public  double InterestRate { get; set; } = 0;
-        public void Deposit()
-        {
-            return IinitialDeposit= Credit;
-        }    
-        public  void WhithDraw ()
-        { return}
+        public double  WhithDraw{ get; set; } = 0;
+        
+        
         public void CalculateOverdraft()
         {
+            if (Balance < 0)
+            {
+                Overdraft = Credit * 0.4m;
+            }
+            else
+            {
+                Overdraft = 0;
+            }
             return
         }
         public void CalculateLatePayment()

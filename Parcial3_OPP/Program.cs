@@ -11,8 +11,8 @@ namespace Parcial3_OPP
             CheckingAccount checkingAccount = new CheckingAccount();
             BankAccount bankAccount = new BankAccount();
             Console.WriteLine("Calculate banking transactions ");
-            Console.WriteLine("");
-
+            Console.WriteLine("Select 1 to Checking Account  Select 2 to Savings Account");
+            Option=Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Enter Bank account number");
             bankAccount.NumberAccount=Convert.ToInt16( Console.ReadLine());
             Console.WriteLine("Enter  bank account Holder");
