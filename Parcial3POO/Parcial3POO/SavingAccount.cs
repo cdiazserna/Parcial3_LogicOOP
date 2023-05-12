@@ -9,10 +9,10 @@ namespace Parcial3POO
         public decimal Balance { get; private set; }
         public decimal InterestRate { get; } = 0.015m;
 
-        public SavingAccount(string holder,string bankName, decimal initialDeposit)
+        public SavingAccount(string holder, string nameBank, decimal initialDeposit)
         {
             Holder = holder;
-            NameBank = NameBank;
+            NameBank = nameBank;
             Balance = initialDeposit;
         }
 
