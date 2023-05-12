@@ -8,9 +8,10 @@ namespace ConsoleApp1
         {
 
             Console.WriteLine("----------------------------");
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("DATOS BANCARIOS");
             Console.WriteLine("----------------------------");
 
+            BankAccount bankAccount = new BankAccount();
 
         }
     }
