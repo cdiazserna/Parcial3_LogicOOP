@@ -1,8 +1,29 @@
 ﻿using System;
 
-public class Class1
+public class SavingAccount
 {
-	public Class1()
-	{
-	}
+    public int yield { get; set; }
+    public int balance{ get; set; }
+
+
+
+    public void deposit()
+    {
+
+    }
+
+    public void withdraw()
+    {
+
+    }
+
+    public void trasfer()
+    {
+
+    }
+
+    public void calculateYield()
+    {
+
+    }
 }
