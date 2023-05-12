@@ -6,7 +6,10 @@ namespace Parcial3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
+            decimal Balance;
+            
+            Console.WriteLine("Ingrese el saldo: ")
+            Balance = Convert.ToDecimal(Console.ReadLine());
+         }
     }
 }
