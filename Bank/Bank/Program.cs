@@ -44,6 +44,7 @@ namespace Bank
             }
             Console.WriteLine("ingrese los dias en mora");
             count1.daysLate = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Mora: " + count1.calculateLatePayment());
 
 
         }
