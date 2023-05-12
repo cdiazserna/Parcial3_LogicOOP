@@ -7,8 +7,7 @@ namespace Bank
         static void Main(string[] args)
         {
             CheckingAccount count1 = new CheckingAccount();
-            Console.WriteLine("Ingrese el credito\n");
-            count1.credit = Convert.ToDecimal(Console.ReadLine());
+            count1.deposit();
             Console.WriteLine("Ingrese el número de retiros");
             int n = Convert.ToInt32(Console.ReadLine());
             decimal overdraft;
@@ -42,9 +41,18 @@ namespace Bank
                     count1.credit = count1.credit + overdraft;
                 }
             }
-            Console.WriteLine("ingrese los dias en mora");
+            Console.WriteLine("ingrese los dias en mora: ");
             count1.daysLate = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Mora: " + count1.calculateLatePayment());
+
+
+
+            SavingAccount account = new SavingAccount();
+            Console.WriteLine("Ingrese saldo: ");
+            account.balance = Convert.ToInt16(Console.ReadLine());
+
+            Console.WriteLine("ingrese dinero a depositar al usuario: ");
+
 
 
         }
