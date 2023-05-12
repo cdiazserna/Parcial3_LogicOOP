@@ -7,14 +7,14 @@ namespace Parcial3
         static void Main(string[] args)
         {
             // Cuenta Corriente
-            var checkingAccount = new CheckingAccount
+            CheckingAccount checkingAccount = new CheckingAccount
             {
-                NumberAccount = "1234567890",
+                NumberAccount = "12345673",
                 Holder = "Juan Perez",
                 NameBank = "Banco XYZ",
                 Credit = 1000m,
                 Overdraft = 0.4m,
-                InterestRate = 0.0265m
+                InterestRate = 0.0265m,
             };
 
             Console.WriteLine("Cuenta Corriente");
@@ -37,6 +37,37 @@ namespace Parcial3
 
             decimal latePaymentFee = checkingAccount.CalculateLatePayment(daysLate);
             Console.WriteLine($"Intereses por pago tardío ({daysLate} días): {latePaymentFee:C}");
+
+            // Cuenta de Ahorros
+            SavingAccount savingsAccount = new SavingAccount
+            {
+                NumberAccount = "0987654321",
+                Holder = "Maria Lopez",
+                NameBank = "Banco XYZ",
+                Balance = 1500m,
+                Yield = 1.5m
+            };
+
+            Console.WriteLine("\nCuenta de Ahorros");
+            Console.WriteLine($"Titular: {savingsAccount.Holder}");
+            Console.WriteLine($"Banco: {savingsAccount.NameBank}");
+            Console.WriteLine($"Número de cuenta: {savingsAccount.NumberAccount}");
+
+            decimal depositAmount2 = 1000m;
+            decimal withdrawAmount2 = 2000m;
+            decimal transferAmount = 500m;
+
+            decimal currentBalance2 = savingsAccount.Deposit(depositAmount2);
+            Console.WriteLine($"Depósito de {depositAmount2:C}. Saldo actual: {currentBalance2:C}");
+
+            currentBalance2 = savingsAccount.Withdraw(withdrawAmount2);
+            Console.WriteLine($"Retiro de {withdrawAmount2:C}. Saldo actual: {currentBalance2:C}");
+
+            decimal transferAmountResult = savingsAccount.Transfer(transferAmount);
+            Console.WriteLine($"Transferencia de {transferAmount:C}. Saldo actual: {currentBalance2:C}");
+
+            decimal currentYield = savingsAccount.CalculateYield();
+            Console.WriteLine($"Rendimiento mensual: {currentYield:C}");
         }
     }
 }

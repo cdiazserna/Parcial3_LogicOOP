@@ -9,23 +9,45 @@ namespace Parcial3
         public decimal Balance { get; set; }
         public decimal Yield { get; set; }
 
-        public decimal Deposit()
+        public decimal Deposit(decimal amount)
         {
-            return;
+           Balance += amount;
+            return amount;
         }
-        public decimal Withdraw()
+        public decimal Withdraw(decimal amount)
         {
-            return;
+            if (amount >Balance)
+            {
+                Console.WriteLine("Error - Fondos Insuficientes");
+
+                return 0;
+            }
+            else 
+            {
+                Balance -= amount;
+                return amount;
+            }
+            
         }
 
-        public decimal Transfer()
+        public decimal Transfer(decimal amount)
         {
-            return;
+            if (amount > Balance)
+            {
+                Console.WriteLine("Error - Fondos Insuficientes");
+
+                return 0;
+            }
+            else
+            {
+                Balance -= amount;
+                return amount;
+            }
         }
 
         public decimal CalculateYield()
         {
-            return;
+            return Balance * (Yield/100);
         }
     }
 }

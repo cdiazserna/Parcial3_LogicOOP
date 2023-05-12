@@ -8,25 +8,25 @@ namespace Parcial3
     {
         public decimal Credit { get; set; }
         public decimal Overdraft { get; set; }
-        public double InterestRate { get; set; }
+        public decimal InterestRate { get; set; }
 
         public decimal Deposit(decimal amount)
         {
             return base.Deposit(amount);
         }
-        public decimal Withdraw()
+        public decimal Withdraw(decimal amount)
         {
-            return;
+            return base.Withdraw(amount);
         }
 
         public decimal CalculateOverdraft()
         {
-            return;
+            return Credit *0.4M;
         }
 
-        public decimal CalculateLatePayment()
+        public decimal CalculateLatePayment(int daysLate)
         {
-            return;
+            return Credit * (0.0265m * daysLate);
         }
 
     }
