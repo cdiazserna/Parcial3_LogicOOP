@@ -100,12 +100,8 @@ namespace Bank
             //Debes mostrar al final de la pantalla, el valor depositado en cada cuenta,
             //nombre del titular, nombre del banco, crédito, sobregiro, intereses, saldo y rendimientos y los valores dados por los cálculos de cada método.
             Console.WriteLine("Checking account:");
-            Console.WriteLine("valor depositado en cada cuenta(credito): "+count1.credit);
-            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
-            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
-            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
-            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
-            Console.WriteLine("valor depositado en cada cuenta(credito): " + count1.credit);
+            Console.WriteLine("valor depositado actual(credito) es: " + count1.credit);
+
 
 
 
