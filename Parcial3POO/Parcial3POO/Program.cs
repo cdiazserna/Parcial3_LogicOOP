@@ -6,10 +6,22 @@ namespace Parcial3POO
     {
         static void Main(string[] args)
         {
-            CheckingAccount checkingAccount = new CheckingAccount("John Doe", "My Bank", 5000);
+            Console.WriteLine("Ingrese el nombre del titular de la cuenta corriente:");
+            string checkingOwner = Console.ReadLine();
+            Console.WriteLine("Ingrese el nombre del banco:");
+            string checkingBankName = Console.ReadLine();
+            Console.WriteLine("Ingrese el crédito mensual de la cuenta corriente:");
+            decimal checkingCredit = decimal.Parse(Console.ReadLine());
 
-            checkingAccount.Withdraw(2000);
-            checkingAccount.MakePurchase(3000);
+            CheckingAccount checkingAccount = new CheckingAccount(checkingOwner, checkingBankName, checkingCredit);
+
+            Console.WriteLine("Ingrese el monto a retirar de la cuenta corriente:");
+            decimal withdrawalAmount = decimal.Parse(Console.ReadLine());
+            checkingAccount.Withdraw(withdrawalAmount);
+
+            Console.WriteLine("Ingrese el monto de la compra con tarjeta:");
+            decimal purchaseAmount = decimal.Parse(Console.ReadLine());
+            checkingAccount.MakePurchase(purchaseAmount);
 
             decimal credit = checkingAccount.Credit;
             decimal overdraft = checkingAccount.Overdraft;
