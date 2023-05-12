@@ -52,6 +52,45 @@ namespace Bank
             account.balance = Convert.ToInt16(Console.ReadLine());
 
             Console.WriteLine("ingrese dinero a depositar al usuario: ");
+            account.deposit();
+
+
+            Console.WriteLine("Ingrese el número de trasferencias");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                if (account.balance >= 0)
+                {
+                    account.trasfer();
+                }
+                else
+                {
+                    Console.WriteLine("Sin saldo");
+                }
+
+
+
+            }
+
+
+            Console.WriteLine("Ingrese el número de trasferencias \n");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+                if (count1.credit >= 0)
+                {
+                    account.trasfer();
+                }
+                else
+                {
+                    Console.WriteLine("Sin saldo");
+                }
+            }
+
+
+            Console.WriteLine("Ingrese meses")
 
 
 

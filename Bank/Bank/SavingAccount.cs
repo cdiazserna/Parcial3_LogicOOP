@@ -6,7 +6,7 @@ public class SavingAccount:BankAccount
     public decimal balance{ get; set; }
     public decimal cashWithdrawn { get; set; }
     public decimal trasfers { get; set; }
-    public int moths { get; set; }
+    //public int moths { get; set; }
 
 
     public void deposit()
@@ -33,6 +33,6 @@ public class SavingAccount:BankAccount
 
     public decimal calculateYield()
     {
-        return moths * yield;
+        return (balance) * yield;
     }
 }
